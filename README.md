@@ -9,5 +9,6 @@ lingr-radar
 コンフィグファイルのExample
 ```json
 {
+
 }
 ```
