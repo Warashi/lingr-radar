@@ -36,12 +36,14 @@ func main() {
 			message.IconUrl,
 		)
 	}
-	if lc.Observe() != nil || len(lc.RoomIds) == 0 {
-		time.Sleep(1 * time.Second)
-	}
-	runtime.GC()
 
-	if err != nil {
-		log.Fatal(err)
+	for {
+		if lc.Observe() != nil || len(lc.RoomIds) == 0 {
+			time.Sleep(1 * time.Second)
+		}
+		runtime.GC()
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 }
