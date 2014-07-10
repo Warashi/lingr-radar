@@ -15,3 +15,6 @@ lingr-radar
     "APIKey":"your apikey"
 }
 ```
+
+----
+source の一部は lestrratさんの pecoからコピーさせていただきました.
