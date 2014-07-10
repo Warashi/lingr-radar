@@ -6,6 +6,8 @@ import (
 	"strings"
 
 	"github.com/mattn/go-lingr"
+	"runtime"
+	"time"
 )
 
 func main() {
@@ -34,7 +36,11 @@ func main() {
 			message.IconUrl,
 		)
 	}
-	err = lc.Observe()
+	if lc.Observe() != nil || len(client.RoomIds) == 0 {
+		time.Sleep(1 * time.Second)
+	}
+	runtime.GC()
+
 	if err != nil {
 		log.Fatal(err)
 	}
