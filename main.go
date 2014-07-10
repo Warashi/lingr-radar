@@ -36,7 +36,7 @@ func main() {
 			message.IconUrl,
 		)
 	}
-	if lc.Observe() != nil || len(client.RoomIds) == 0 {
+	if lc.Observe() != nil || len(lc.RoomIds) == 0 {
 		time.Sleep(1 * time.Second)
 	}
 	runtime.GC()
