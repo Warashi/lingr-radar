@@ -42,8 +42,5 @@ func main() {
 			time.Sleep(1 * time.Second)
 		}
 		runtime.GC()
-		if err != nil {
-			log.Fatal(err)
-		}
 	}
 }
