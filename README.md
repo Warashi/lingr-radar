@@ -9,6 +9,8 @@ lingr-radar
 コンフィグファイルのExample
 ```json
 {
-
+    "User":"your username",
+    "Password":"your password",
+    "APIKey":"your apikey"
 }
 ```
